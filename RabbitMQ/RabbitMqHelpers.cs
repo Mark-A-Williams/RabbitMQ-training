@@ -1,5 +1,7 @@
-﻿using RabbitMQ.Client;
+﻿using Newtonsoft.Json;
+using RabbitMQ.Client;
 using System;
+using System.Text;
 
 namespace RabbitMQ
 {
@@ -16,6 +18,22 @@ namespace RabbitMQ
             channel.QueueDeclare(queue: "hello", durable: false, exclusive: false, autoDelete: false);
 
             return channel;
+        }
+
+        public static IMessage CreateMessageFromModel(object model = default)
+        {
+            var key = Guid.NewGuid();
+            var timestamp = DateTimeOffset.UtcNow;
+
+            var modelAsJson = JsonConvert.SerializeObject(model);
+            var messageBody = Encoding.UTF8.GetBytes(modelAsJson);
+
+            return new SimpleMessage
+            {
+                Key = key,
+                SentTimestamp = timestamp,
+                EncodedContent = messageBody
+            };
         }
     }
 }

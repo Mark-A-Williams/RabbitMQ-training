@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSender", "MessageSender\MessageSender.csproj", "{D55D9A38-6CFC-43E1-AA6F-34370CD62D8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageSender", "MessageSender\MessageSender.csproj", "{D55D9A38-6CFC-43E1-AA6F-34370CD62D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageReceiver", "MessageReceiver\MessageReceiver.csproj", "{3E3782E4-9D1B-44A8-91A0-D96636EE47A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageReceiver", "MessageReceiver\MessageReceiver.csproj", "{3E3782E4-9D1B-44A8-91A0-D96636EE47A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{BC28E36E-D5CF-43C4-BBFC-EAB03639ECC9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ", "RabbitMQ\RabbitMQ.csproj", "{E64B7667-DC8D-4382-9527-B356A9270C7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ", "RabbitMQ\RabbitMQ.csproj", "{E64B7667-DC8D-4382-9527-B356A9270C7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{3E3782E4-9D1B-44A8-91A0-D96636EE47A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E3782E4-9D1B-44A8-91A0-D96636EE47A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E3782E4-9D1B-44A8-91A0-D96636EE47A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC28E36E-D5CF-43C4-BBFC-EAB03639ECC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC28E36E-D5CF-43C4-BBFC-EAB03639ECC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC28E36E-D5CF-43C4-BBFC-EAB03639ECC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC28E36E-D5CF-43C4-BBFC-EAB03639ECC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E64B7667-DC8D-4382-9527-B356A9270C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E64B7667-DC8D-4382-9527-B356A9270C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E64B7667-DC8D-4382-9527-B356A9270C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU

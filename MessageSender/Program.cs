@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Newtonsoft.Json;
 using RabbitMQ;
 using RabbitMQ.Client;
 
@@ -13,12 +14,20 @@ namespace MessageSender
 
             while (true)
             {
-                Console.WriteLine("Type your message and hit enter:");
-                var message = Console.ReadLine();
-                var body = Encoding.UTF8.GetBytes(message);
-                channel.BasicPublish(exchange: "", routingKey: "hello", body: body);
-                Console.WriteLine(" [x] Sent {0}", message);
+                Console.WriteLine("Enter a new message:");
+                var input = Console.ReadLine();
+                
+                var body = GetSerializedMessage(input);
+
+                channel.BasicPublish(exchange: "", routingKey: "hello", body: Encoding.UTF8.GetBytes(body));
+                Console.WriteLine(" [x] Sent {0}", body);
             }
+        }
+
+        private static string GetSerializedMessage(object input)
+        {
+            var message = RabbitMqHelpers.CreateMessageFromModel(input);
+            return JsonConvert.SerializeObject(message);
         }
     }
 }
